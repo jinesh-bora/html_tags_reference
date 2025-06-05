@@ -49,7 +49,7 @@ const pageFileMap = {
     'head.html': 'tag_document_structure.html',
     'body.html': 'tag_document_structure.html',
     'title.html': 'tag_document_structure.html',
-    'meta.html': 'tag_document_structure.html',
+    'meta.html': 'meta_details.html',
     'link.html': 'tag_document_structure.html',
     'style.html': 'tag_document_structure.html',
     'script.html': 'tag_document_structure.html',
@@ -61,7 +61,13 @@ const pageFileMap = {
     'br.html': 'text_formatting_details.html',
     'hr.html': 'text_formatting_details.html',
     'pre.html': 'text_formatting_details.html',
-    'code.html': 'text_formatting_details.html'
+    'code.html': 'text_formatting_details.html',
+
+    'a.html': 'links_details.html',
+    'map.html': 'links_details.html',
+    'area.html': 'links_details.html',
+    'iframe.html': 'links_details.html',
+
 };
 
 // Function to open the mapped detail file
