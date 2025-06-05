@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tags - HTML Reference</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Table Tags</h1>
+        <p>HTML elements for creating structured tabular data</p>
+    </header>
+
+    <nav>
+        <ul>
+<li><a href="../index.html">Back to Main Reference</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>About HTML Tables</h2>
+        <p>HTML tables allow web developers to arrange data in rows and columns. They are designed for presenting tabular data in a structured, grid-based format that makes information easier to read and compare.</p>
+        <p>While tables were once commonly used for page layout, modern web development uses CSS for layout purposes and reserves tables exclusively for presenting tabular data. This approach improves accessibility, responsiveness, and maintainability.</p>
+    </section>
+
+    <section>
+        <h2>Basic Table Elements</h2>
+        
+        <article>
+            <h3>&lt;table&gt;</h3>
+            <p>Defines an HTML table. This element serves as the container for all other table elements.</p>
+            <p>Example of a simple table:</p>
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John Smith&lt;/td&gt;
+    &lt;td&gt;28&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Maria Garcia&lt;/td&gt;
+    &lt;td&gt;32&lt;/td&gt;
+    &lt;td&gt;Spain&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>&lt;tr&gt;</h3>
+            <p>Defines a table row. Each <code>&lt;tr&gt;</code> element creates a new row in the table.</p>
+            <p>Example:</p>
+            <pre>
+&lt;tr&gt;
+  &lt;td&gt;Data 1&lt;/td&gt;
+  &lt;td&gt;Data 2&lt;/td&gt;
+&lt;/tr&gt;
+            </pre>
+            <p>Table rows can contain header cells (<code>&lt;th&gt;</code>) or data cells (<code>&lt;td&gt;</code>).</p>
+        </article>
+        
+        <article>
+            <h3>&lt;th&gt;</h3>
+            <p>Defines a header cell in a table. Header cells are typically bold and centered by default.</p>
+            <p>Example: <code>&lt;th&gt;Column Heading&lt;/th&gt;</code></p>
+            <p>The <code>&lt;th&gt;</code> element is important for accessibility as it associates header information with data cells.</p>
+            
+            <h4>Important Attributes:</h4>
+            <ul>
+                <li><code>scope</code>: Specifies whether the header cell is a header for a column, row, or group of columns or rows
+                    <ul>
+                        <li><code>col</code>: The header cell is a header for a column</li>
+                        <li><code>row</code>: The header cell is a header for a row</li>
+                        <li><code>colgroup</code>: The header cell is a header for a group of columns</li>
+                        <li><code>rowgroup</code>: The header cell is a header for a group of rows</li>
+                    </ul>
+                </li>
+                <li><code>colspan</code>: Specifies the number of columns a header cell should span</li>
+                <li><code>rowspan</code>: Specifies the number of rows a header cell should span</li>
+            </ul>
+            
+            <p>Example with scope attribute:</p>
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th scope="col"&gt;Name&lt;/th&gt;
+    &lt;th scope="col"&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;John&lt;/th&gt;
+    &lt;td&gt;28&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>&lt;td&gt;</h3>
+            <p>Defines a standard data cell in a table.</p>
+            <p>Example: <code>&lt;td&gt;Cell data&lt;/td&gt;</code></p>
+            <p>Data cells can contain text, images, links, lists, or even other tables.</p>
+            
+            <h4>Important Attributes:</h4>
+            <ul>
+                <li><code>colspan</code>: Specifies the number of columns a cell should span</li>
+                <li><code>rowspan</code>: Specifies the number of rows a cell should span</li>
+                <li><code>headers</code>: Specifies one or more header cells a data cell is related to (used for complex tables)</li>
+            </ul>
+            
+            <p>Example with colspan and rowspan:</p>
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th colspan="2"&gt;Contact Info&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John Smith&lt;/td&gt;
+    &lt;td&gt;john@example.com&lt;/td&gt;
+    &lt;td&gt;555-1234&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Jane Doe&lt;/td&gt;
+    &lt;td&gt;jane@example.com&lt;/td&gt;
+    &lt;td&gt;555-5678&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;jane.business@example.com&lt;/td&gt;
+    &lt;td&gt;555-9012&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </article>
+    </section>
+
+    <section>
+        <h2>Table Structure Elements</h2>
+        <p>These elements help organize a table into logical sections, improving both the structure and accessibility.</p>
+        
+        <article>
+            <h3>&lt;caption&gt;</h3>
+            <p>Defines a table caption or title. It should be the first child of the <code>&lt;table&gt;</code> element.</p>
+            <p>Example:</p>
+            <pre>
+&lt;table&gt;
+  &lt;caption&gt;Monthly Savings&lt;/caption&gt;
+  ... table content ...
+&lt;/table&gt;
+            </pre>
+            <p>The <code>&lt;caption&gt;</code> element improves accessibility by providing context for the table.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</h3>
+            <p>These elements group the header, body, and footer content in a table:</p>
+            <ul>
+                <li><code>&lt;thead&gt;</code>: Groups the header content (typically the first row with column headings)</li>
+                <li><code>&lt;tbody&gt;</code>: Groups the main data of the table</li>
+                <li><code>&lt;tfoot&gt;</code>: Groups the footer content (often used for summary rows, totals, etc.)</li>
+            </ul>
+            <p>Example:</p>
+            <pre>
+&lt;table&gt;
+  &lt;caption&gt;Quarterly Sales&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Product&lt;/th&gt;
+      &lt;th scope="col"&gt;Q1&lt;/th&gt;
+      &lt;th scope="col"&gt;Q2&lt;/th&gt;
+      &lt;th scope="col"&gt;Q3&lt;/th&gt;
+      &lt;th scope="col"&gt;Q4&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Widgets&lt;/th&gt;
+      &lt;td&gt;$50,000&lt;/td&gt;
+      &lt;td&gt;$47,000&lt;/td&gt;
+      &lt;td&gt;$55,000&lt;/td&gt;
+      &lt;td&gt;$60,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Gadgets&lt;/th&gt;
+      &lt;td&gt;$35,000&lt;/td&gt;
+      &lt;td&gt;$32,000&lt;/td&gt;
+      &lt;td&gt;$38,000&lt;/td&gt;
+      &lt;td&gt;$41,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Total&lt;/th&gt;
+      &lt;td&gt;$85,000&lt;/td&gt;
+      &lt;td&gt;$79,000&lt;/td&gt;
+      &lt;td&gt;$93,000&lt;/td&gt;
+      &lt;td&gt;$101,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+            </pre>
+            <p>Benefits of using these structural elements:</p>
+            <ul>
+                <li>Improves semantics and structure of the table</li>
+                <li>Helps with accessibility for screen readers</li>
+                <li>Makes CSS styling more specific and maintainable</li>
+                <li>Allows for features like scrollable <code>&lt;tbody&gt;</code> with fixed <code>&lt;thead&gt;</code> and <code>&lt;tfoot&gt;</code></li>
+            </ul>
+        </article>
+        
+        <article>
+            <h3>&lt;colgroup&gt; and &lt;col&gt;</h3>
+            <p>These elements specify properties for entire columns:</p>
+            <ul>
+                <li><code>&lt;colgroup&gt;</code>: Groups one or more columns for formatting</li>
+                <li><code>&lt;col&gt;</code>: Specifies properties for columns within a <code>&lt;colgroup&gt;</code></li>
+            </ul>
+            <p>Example:</p>
+            <pre>
+&lt;table&gt;
+  &lt;colgroup&gt;
+    &lt;col style="background-color: #f2f2f2;"&gt;
+    &lt;col span="2" style="background-color: #e6f7ff;"&gt;
+    &lt;col style="background-color: #ffe6e6;"&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Product&lt;/th&gt;
+    &lt;th&gt;Q1&lt;/th&gt;
+    &lt;th&gt;Q2&lt;/th&gt;
+    &lt;th&gt;Q3&lt;/th&gt;
+  &lt;/tr&gt;
+  ... table data ...
+&lt;/table&gt;
+            </pre>
+            <p>These elements are particularly useful for applying styles to entire columns without having to target individual cells.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Styling Tables with CSS</h2>
+        
+        <article>
+            <h3>Basic Table Styling</h3>
+            <pre>
+/* Basic table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Striped rows */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Caption styling */
+caption {
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+            </pre>
+        </article>
+        
+        <article>
+            <h3>Responsive Tables</h3>
+            <p>Making tables responsive can be challenging. Here are some common approaches:</p>
+            
+            <h4>1. Horizontal Scrolling</h4>
+            <pre>
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+            </pre>
+            <p>This approach keeps the table structure intact but allows horizontal scrolling on small screens.</p>
+            
+            <h4>2. Stacked Layout for Mobile</h4>
+            <pre>
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr {
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+  }
+  
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
+            </pre>
+            <p>This approach requires adding a <code>data-label</code> attribute to each <code>&lt;td&gt;</code> element:</p>
+            <pre>
+&lt;td data-label="Name"&gt;John Smith&lt;/td&gt;
+            </pre>
+        </article>
+    </section>
+
+    <section>
+        <h2>Table Accessibility</h2>
+        <p>Making tables accessible is crucial for users who rely on screen readers or other assistive technologies.</p>
+        
+        <article>
+            <h3>Key Accessibility Features</h3>
+            <ul>
+                <li><strong>Use proper table structure</strong>: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements</li>
+                <li><strong>Include a caption</strong>: Provide context with <code>&lt;caption&gt;</code></li>
+                <li><strong>Use header cells properly</strong>: Mark headers with <code>&lt;th&gt;</code> and specify <code>scope</code> attributes</li>
+                <li><strong>Associate data cells with headers</strong>: Use <code>headers</code> attribute for complex tables</li>
+                <li><strong>Avoid using tables for layout</strong>: Use CSS for layout purposes</li>
+                <li><strong>Keep tables simple</strong>: Avoid overly complex structures when possible</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h3>Example of an Accessible Table</h3>
+            <pre>
+&lt;table&gt;
+  &lt;caption&gt;Course Schedule - Fall 2025&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Course Code&lt;/th&gt;
+      &lt;th scope="col"&gt;Course Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Instructor&lt;/th&gt;
+      &lt;th scope="col"&gt;Schedule&lt;/th&gt;
+      &lt;th scope="col"&gt;Room&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;CS101&lt;/th&gt;
+      &lt;td&gt;Introduction to Programming&lt;/td&gt;
+      &lt;td&gt;Dr. Smith&lt;/td&gt;
+      &lt;td&gt;Mon/Wed 10:00-11:30&lt;/td&gt;
+      &lt;td&gt;Tech 305&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;MATH200&lt;/th&gt;
+      &lt;td&gt;Calculus II&lt;/td&gt;
+      &lt;td&gt;Prof. Johnson&lt;/td&gt;
+      &lt;td&gt;Tue/Thu 13:00-14:30&lt;/td&gt;
+      &lt;td&gt;Science 211&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>Complex Tables with Headers Attribute</h3>
+            <p>For tables with irregular structures, use the <code>headers</code> attribute to associate data cells with their headers:</p>
+            <pre>
+&lt;table&gt;
+  &lt;caption&gt;Product Comparison&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;th id="product1" scope="col"&gt;Product A&lt;/th&gt;
+    &lt;th id="product2" scope="col"&gt;Product B&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="feature1" scope="row"&gt;Price&lt;/th&gt;
+    &lt;td headers="product1 feature1"&gt;$49.99&lt;/td&gt;
+    &lt;td headers="product2 feature1"&gt;$69.99&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="feature2" scope="row"&gt;Features&lt;/th&gt;
+    &lt;td headers="product1 feature2"&gt;Basic&lt;/td&gt;
+    &lt;td headers="product2 feature2"&gt;Advanced&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </article>
+    </section>
+
+    <section>
+        <h2>Complex Table Examples</h2>
+        
+        <article>
+            <h3>Calendar Table</h3>
+            <pre>
+&lt;table class="calendar"&gt;
+  &lt;caption&gt;June 2025&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Sun&lt;/th&gt;
+      &lt;th scope="col"&gt;Mon&lt;/th&gt;
+      &lt;th scope="col"&gt;Tue&lt;/th&gt;
+      &lt;th scope="col"&gt;Wed&lt;/th&gt;
+      &lt;th scope="col"&gt;Thu&lt;/th&gt;
+      &lt;th scope="col"&gt;Fri&lt;/th&gt;
+      &lt;th scope="col"&gt;Sat&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;!-- Additional rows omitted for brevity --&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>Product Comparison Table</h3>
+            <pre>
+&lt;table class="comparison"&gt;
+  &lt;caption&gt;Smartphone Comparison&lt;/caption&gt;
+  &lt;colgroup&gt;
+    &lt;col style="width: 20%"&gt;
+    &lt;col style="width: 26.66%"&gt;
+    &lt;col style="width: 26.66%"&gt;
+    &lt;col style="width: 26.66%"&gt;
+  &lt;/colgroup&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Feature&lt;/th&gt;
+      &lt;th scope="col"&gt;Model X&lt;/th&gt;
+      &lt;th scope="col"&gt;Model Y&lt;/th&gt;
+      &lt;th scope="col"&gt;Model Z&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Price&lt;/th&gt;
+      &lt;td&gt;$699&lt;/td&gt;
+      &lt;td&gt;$899&lt;/td&gt;
+      &lt;td&gt;$1099&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Screen Size&lt;/th&gt;
+      &lt;td&gt;5.8"&lt;/td&gt;
+      &lt;td&gt;6.1"&lt;/td&gt;
+      &lt;td&gt;6.7"&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Battery Life&lt;/th&gt;
+      &lt;td&gt;12 hours&lt;/td&gt;
+      &lt;td&gt;15 hours&lt;/td&gt;
+      &lt;td&gt;18 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Camera&lt;/th&gt;
+      &lt;td&gt;12MP Dual&lt;/td&gt;
+      &lt;td&gt;12MP Triple&lt;/td&gt;
+      &lt;td&gt;16MP Quad&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Storage&lt;/th&gt;
+      &lt;td&gt;64GB/128GB&lt;/td&gt;
+      &lt;td&gt;128GB/256GB&lt;/td&gt;
+      &lt;td&gt;256GB/512GB&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Rating&lt;/th&gt;
+      &lt;td&gt;★★★★☆&lt;/td&gt;
+      &lt;td&gt;★★★★★&lt;/td&gt;
+      &lt;td&gt;★★★★★&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>Nested Tables (Use with Caution)</h3>
+            <p>While possible, nested tables should be used sparingly as they can create complexity and accessibility issues:</p>
+            <pre>
+&lt;table&gt;
+  &lt;caption&gt;Department Budget Summary&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Department&lt;/th&gt;
+    &lt;th&gt;Budget Breakdown&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Marketing&lt;/td&gt;
+    &lt;td&gt;
+      &lt;table&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Category&lt;/th&gt;
+          &lt;th&gt;Amount&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Advertising&lt;/td&gt;
+          &lt;td&gt;$50,000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Events&lt;/td&gt;
+          &lt;td&gt;$25,000&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+            <p>Modern alternatives to nested tables include using lists or divs within cells, or considering if the data structure might be better presented in a different format altogether.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Best Practices for HTML Tables</h2>
+        <ul>
+            <li><strong>Use tables for tabular data only</strong>, not for layout purposes</li>
+            <li><strong>Include proper structure</strong> with <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> where appropriate</li>
+            <li><strong>Always use header cells</strong> (<code>&lt;th&gt;</code>) with appropriate <code>scope</code> attributes</li>
+            <li><strong>Add captions</strong> to provide context for the table</li>
+            <li><strong>Keep tables simple</strong> and avoid excessive nesting or merging of cells</li>
+            <li><strong>Consider responsiveness</strong> for different screen sizes</li>
+            <li><strong>Use CSS for styling</strong> rather than deprecated HTML attributes</li>
+            <li><strong>Test tables with screen readers</strong> to ensure accessibility</li>
+            <li><strong>Include a summary</strong> of complex tables for screen reader users</li>
+            <li><strong>Use <code>zebra striping</code></strong> (alternating row colors) for better readability of larger tables</li>
+            <li><strong>Consider using CSS Grid or Flexbox</strong> for complex layouts that aren't actually tabular data</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Common Patterns and Use Cases</h2>
+        <ul>
+            <li><strong>Data Tables</strong>: Financial reports, statistical data, comparison charts</li>
+            <li><strong>Schedules and Timetables</strong>: Class schedules, train/bus timetables, TV guides</li>
+            <li><strong>Product Comparison</strong>: Feature comparison across different products</li>
+            <li><strong>Pricing Tables</strong>: Pricing plans with feature lists</li>
+            <li><strong>Calendars</strong>: Monthly calendars with events</li>
+            <li><strong>Nutrition Facts</strong>: Food nutrition information</li>
+            <li><strong>Specifications</strong>: Technical specifications for products</li>
+            <li><strong>Leaderboards</strong>: Rankings and scores</li>
+        </ul>
+    </section>
+
+    <footer>
+<p><a href="../index.html" class="back-button">Back to Main Reference</a></p>
+       <p>&copy; Created Jinesh for My Most Intelligent Friend By ❤️ </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Structure Tags - HTML Reference</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Basic Document Structure Tags</h1>
+        <p>The foundation elements of every HTML document</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Back to Main Reference</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>About Document Structure Tags</h2>
+        <p>Document structure tags define the fundamental architecture of an HTML document. These elements create the skeleton of a webpage and are essential for proper rendering by browsers.</p>
+        <p>Every properly formed HTML document should include these structural elements to ensure correct interpretation by browsers and accessibility tools.</p>
+    </section>
+
+    <section>
+        <article>
+            <h3>&lt;!DOCTYPE html&gt;</h3>
+            <p>Defines the document type and HTML version. This declaration is required at the beginning of all HTML5 documents.</p>
+            <p>Example: <code>&lt;!DOCTYPE html&gt;</code></p>
+            <p>The DOCTYPE declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in. It must appear at the very beginning of the HTML document, before the &lt;html&gt; tag.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;html&gt;</h3>
+            <p>The root element of an HTML page. All other elements are contained within this element.</p>
+            <p>Example: <code>&lt;html lang="en"&gt;...&lt;/html&gt;</code></p>
+            <p>The <code>lang</code> attribute specifies the language of the document and is important for accessibility and search engines. Common values include "en" for English, "es" for Spanish, "fr" for French, etc.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;head&gt;</h3>
+            <p>Contains meta information about the document such as title, character set, and other meta information.</p>
+            <p>Example:</p>
+            <pre>
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+            </pre>
+            <p>The &lt;head&gt; element contains metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is not displayed on the page but is machine parsable.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;title&gt;</h3>
+            <p>Specifies the title of the document, which appears in the browser's title bar or tab.</p>
+            <p>Example: <code>&lt;title&gt;My Website - Home&lt;/title&gt;</code></p>
+            <p>The title is also used by search engines to determine what the page is about and by screen readers to provide context to users. It's important for SEO and accessibility.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;body&gt;</h3>
+            <p>Contains the visible content of the HTML document.</p>
+            <p>Example:</p>
+            <pre>
+&lt;body&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+            </pre>
+            <p>Everything inside the &lt;body&gt; element is displayed in the browser window. This includes text, images, links, tables, lists, etc.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Best Practices for Document Structure</h2>
+        <ul>
+            <li>Always include the DOCTYPE declaration at the beginning of your HTML document</li>
+            <li>Always specify the language of your document using the lang attribute in the html tag</li>
+            <li>Include essential meta tags in the head section (charset, viewport, description)</li>
+            <li>Keep the title concise but descriptive</li>
+            <li>Organize your body content with semantic elements for better structure and accessibility</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Complete HTML5 Document Structure Example</h2>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="A brief description of your page"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Main Heading&lt;/h1&gt;
+    &lt;/header&gt;
+    
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Section Heading&lt;/h2&gt;
+            &lt;p&gt;Section content goes here...&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 My Website. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+    
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </section>
+
+    <footer>
+        <p><a href="../index.html" class="back-button">Back to Main Reference</a></p>
+       <p>&copy; Created Jinesh for My Most Intelligent Friend By ❤️ </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Tags - HTML Reference</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meta Tags</h1>
+        <p>HTML elements that provide metadata about a document</p>
+    </header>
+
+    <nav>
+        <ul>
+<li><a href="../index.html">Back to Main Reference</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>About HTML Metadata</h2>
+        <p>Metadata is data about data—in the context of HTML, metadata provides information about the HTML document itself rather than the visible content. This metadata is not displayed on the page but is machine-parsable and used by browsers, search engines, and other web services.</p>
+        <p>HTML metadata is primarily defined using <code>&lt;meta&gt;</code> tags in the document's <code>&lt;head&gt;</code> section, although other elements like <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>, and <code>&lt;style&gt;</code> also contribute to a document's metadata.</p>
+    </section>
+
+    <section>
+        <h2>The Meta Element</h2>
+        
+        <article>
+            <h3>&lt;meta&gt;</h3>
+            <p>Provides metadata about the HTML document. It's always placed within the <code>&lt;head&gt;</code> element.</p>
+            <p>The <code>&lt;meta&gt;</code> element is an empty element (it doesn't have a closing tag) and uses attributes to specify the type and content of metadata.</p>
+            
+            <h4>Key Attributes:</h4>
+            <ul>
+                <li><code>name</code>: Specifies the type of metadata</li>
+                <li><code>content</code>: Specifies the metadata value</li>
+                <li><code>charset</code>: Specifies the character encoding for the document</li>
+                <li><code>http-equiv</code>: Provides an HTTP header for the information/value in the content attribute</li>
+                <li><code>property</code>: Used for social media metadata (e.g., Open Graph Protocol)</li>
+            </ul>
+            
+            <h4>Basic Examples:</h4>
+            <pre>
+&lt;!-- Character encoding --&gt;
+&lt;meta charset="UTF-8"&gt;
+
+&lt;!-- Page description --&gt;
+&lt;meta name="description" content="A comprehensive guide to HTML meta tags"&gt;
+
+&lt;!-- Viewport settings for responsive design --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;!-- HTTP-equiv example for refresh --&gt;
+&lt;meta http-equiv="refresh" content="30"&gt;
+            </pre>
+        </article>
+    </section>
+
+    <section>
+        <h2>Character Encoding</h2>
+        
+        <article>
+            <h3>&lt;meta charset&gt;</h3>
+            <p>Specifies the character encoding used in the document. This meta tag should be placed as early as possible within the <code>&lt;head&gt;</code> element, ideally as the first element after the opening <code>&lt;head&gt;</code> tag.</p>
+            <p>Example:</p>
+            <pre>
+&lt;meta charset="UTF-8"&gt;
+            </pre>
+            <p>Common character encodings include:</p>
+            <ul>
+                <li><code>UTF-8</code>: The most widely used encoding that supports virtually all characters and symbols (recommended)</li>
+                <li><code>ISO-8859-1</code>: Latin alphabet encoding (less common now)</li>
+                <li><code>Windows-1252</code>: Microsoft Windows Western European encoding (less common now)</li>
+            </ul>
+            <p>Best practice is to always use UTF-8 for all HTML documents, as it supports all languages and a wide range of symbols.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Viewport Settings</h2>
+        
+        <article>
+            <h3>&lt;meta name="viewport"&gt;</h3>
+            <p>Controls how a webpage is displayed on mobile devices. This is crucial for responsive web design.</p>
+            <p>Example:</p>
+            <pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </pre>
+            <p>Common viewport settings in the <code>content</code> attribute:</p>
+            <ul>
+                <li><code>width=device-width</code>: Sets the width of the page to follow the screen width of the device</li>
+                <li><code>initial-scale=1.0</code>: Sets the initial zoom level when the page is first loaded</li>
+                <li><code>minimum-scale=1.0</code>: Minimum zoom level allowed</li>
+                <li><code>maximum-scale=5.0</code>: Maximum zoom level allowed</li>
+                <li><code>user-scalable=yes</code>: Allows (yes) or disables (no) zoom in and out actions on the page</li>
+            </ul>
+            
+            <p>Example with additional parameters:</p>
+            <pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes"&gt;
+            </pre>
+            
+            <p><strong>Note:</strong> Disabling user scaling (<code>user-scalable=no</code>) is generally considered a bad practice for accessibility. Users with visual impairments often rely on the ability to zoom in on content.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>SEO Meta Tags</h2>
+        
+        <article>
+            <h3>&lt;meta name="description"&gt;</h3>
+            <p>Provides a brief description of the webpage. Search engines often display this in search results.</p>
+            <p>Example:</p>
+            <pre>
+&lt;meta name="description" content="Learn about HTML meta tags, their attributes, and best practices for improving SEO and social media sharing."&gt;
+            </pre>
+            <p>Best practices:</p>
+            <ul>
+                <li>Keep descriptions between 150-160 characters (search engines may truncate longer descriptions)</li>
+                <li>Make them unique for each page</li>
+                <li>Accurately summarize the page content</li>
+                <li>Include relevant keywords naturally</li>
+                <li>Make it compelling to encourage clicks</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h3>&lt;meta name="keywords"&gt;</h3>
+            <p>Lists keywords relevant to the page content. While most major search engines now give this tag little to no weight, some smaller search engines might still use it.</p>
+            <p>Example:</p>
+            <pre>
+&lt;meta name="keywords" content="HTML, meta tags, SEO, web development, HTML5, metadata"&gt;
+            </pre>
+            <p>Note that keyword stuffing (excessive use of keywords) can be seen as a spammy practice and might negatively affect SEO.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;meta name="author"&gt;</h3>
+            <p>Specifies the author of the webpage.</p>
+            <p>Example:</p>
+            <pre>
+&lt;meta name="author" content="John Doe"&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>&lt;meta name="robots"&gt;</h3>
+            <p>Directs search engine crawlers on how to index and follow links on the page.</p>
+            <p>Example:</p>
+            <pre>
+&lt;meta name="robots" content="index, follow"&gt;
+            </pre>
+            <p>Common values for the <code>content</code> attribute:</p>
+            <ul>
+                <li><code>index</code>: Allows search engines to index the page</li>
+                <li><code>noindex</code>: Prevents search engines from indexing the page</li>
+                <li><code>follow</code>: Allows search engines to follow links on the page</li>
+                <li><code>nofollow</code>: Prevents search engines from following links on the page</li>
+                <li><code>noarchive</code>: Prevents search engines from showing cached versions of the page</li>
+                <li><code>all</code>: Equivalent to <code>index, follow</code></li>
+                <li><code>none</code>: Equivalent to <code>noindex, nofollow</code></li>
+            </ul>
+            
+            <p>For specific search engines, you can use:</p>
+            <pre>
+&lt;meta name="googlebot" content="noindex, nofollow"&gt;
+&lt;meta name="bingbot" content="noindex, nofollow"&gt;
+            </pre>
+        </article>
+    </section>
+
+    <section>
+        <h2>HTTP-Equiv Meta Tags</h2>
+        
+        <article>
+            <h3>&lt;meta http-equiv&gt;</h3>
+            <p>Provides an HTTP header for the information/value in the content attribute. These tags act as though they were HTTP response headers.</p>
+            
+            <h4>Common HTTP-Equiv Values:</h4>
+            
+            <h5>1. Refresh</h5>
+            <p>Redirects to another URL after a specified time interval or immediately refreshes the page.</p>
+            <pre>
+&lt;!-- Refresh the page every 30 seconds --&gt;
+&lt;meta http-equiv="refresh" content="30"&gt;
+
+&lt;!-- Redirect to another page after 5 seconds --&gt;
+&lt;meta http-equiv="refresh" content="5; url=https://example.com/new-page"&gt;
+            </pre>
+            <p>Note: Automatic page refreshes can disrupt the user experience and may pose accessibility issues.</p>
+            
+            <h5>2. Content-Type</h5>
+            <p>Specifies the document's MIME type and character encoding (legacy approach, using <code>&lt;meta charset&gt;</code> is now preferred).</p>
+            <pre>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+            </pre>
+            
+            <h5>3. X-UA-Compatible</h5>
+            <p>Used for Internet Explorer compatibility mode.</p>
+            <pre>
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            </pre>
+            <p>This tells Internet Explorer to use the highest mode available.</p>
+            
+            <h5>4. Content-Security-Policy</h5>
+            <p>Helps prevent Cross-Site Scripting (XSS) and data injection attacks.</p>
+            <pre>
+&lt;meta http-equiv="Content-Security-Policy" content="default-src 'self'"&gt;
+            </pre>
+            <p>This example restricts resources to the same origin as the page itself.</p>
+            
+            <h5>5. Cache-Control</h5>
+            <p>Controls caching behavior.</p>
+            <pre>
+&lt;meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"&gt;
+&lt;meta http-equiv="Pragma" content="no-cache"&gt;
+&lt;meta http-equiv="Expires" content="0"&gt;
+            </pre>
+            <p>This prevents caching of the page.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Social Media Meta Tags</h2>
+        
+        <article>
+            <h3>Open Graph Protocol</h3>
+            <p>Enables any web page to become a rich object in social media platforms like Facebook, LinkedIn, and Pinterest.</p>
+            <p>Open Graph meta tags use the <code>property</code> attribute instead of <code>name</code>.</p>
+            <p>Basic Open Graph example:</p>
+            <pre>
+&lt;meta property="og:title" content="HTML Meta Tags Reference"&gt;
+&lt;meta property="og:description" content="A comprehensive guide to HTML meta tags and their usage."&gt;
+&lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+&lt;meta property="og:url" content="https://example.com/meta-tags"&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta property="og:site_name" content="HTML Reference"&gt;
+            </pre>
+            
+            <h4>Common Open Graph Properties:</h4>
+            <ul>
+                <li><code>og:title</code>: The title of the page</li>
+                <li><code>og:description</code>: A brief description of the content</li>
+                <li><code>og:image</code>: The URL of an image to represent the content</li>
+                <li><code>og:url</code>: The canonical URL of the page</li>
+                <li><code>og:type</code>: The type of content (e.g., website, article, product)</li>
+                <li><code>og:site_name</code>: The name of the overall website</li>
+                <li><code>og:locale</code>: The locale of the content (e.g., en_US)</li>
+            </ul>
+            
+            <p>For articles, you can add:</p>
+            <pre>
+&lt;meta property="article:published_time" content="2025-06-04T12:00:00+00:00"&gt;
+&lt;meta property="article:author" content="John Doe"&gt;
+&lt;meta property="article:section" content="Web Development"&gt;
+&lt;meta property="article:tag" content="HTML"&gt;
+&lt;meta property="article:tag" content="Meta Tags"&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>Twitter Cards</h3>
+            <p>Enables rich media experiences when links are shared on Twitter.</p>
+            <p>Basic Twitter Card example:</p>
+            <pre>
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:site" content="@yourusername"&gt;
+&lt;meta name="twitter:title" content="HTML Meta Tags Reference"&gt;
+&lt;meta name="twitter:description" content="A comprehensive guide to HTML meta tags and their usage."&gt;
+&lt;meta name="twitter:image" content="https://example.com/image.jpg"&gt;
+            </pre>
+            
+            <h4>Common Twitter Card Properties:</h4>
+            <ul>
+                <li><code>twitter:card</code>: The type of card (summary, summary_large_image, app, player)</li>
+                <li><code>twitter:site</code>: The Twitter @username of the website</li>
+                <li><code>twitter:creator</code>: The Twitter @username of the content creator</li>
+                <li><code>twitter:title</code>: The title of the content</li>
+                <li><code>twitter:description</code>: A brief description of the content</li>
+                <li><code>twitter:image</code>: The URL of an image to represent the content</li>
+                <li><code>twitter:image:alt</code>: A text description of the image for accessibility</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Link Tags</h2>
+        
+        <article>
+            <h3>&lt;link&gt;</h3>
+            <p>Defines the relationship between the current document and an external resource. Most commonly used to link to stylesheets, but also used for favicons, alternate versions of a page, and more.</p>
+            
+            <h4>Key Attributes:</h4>
+            <ul>
+                <li><code>rel</code>: Required. Specifies the relationship between the current document and the linked document</li>
+                <li><code>href</code>: Specifies the location of the linked document</li>
+                <li><code>type</code>: Specifies the media type of the linked document</li>
+                <li><code>media</code>: Specifies what media/device the linked document is optimized for</li>
+                <li><code>sizes</code>: Specifies the size of icons for visual media</li>
+                <li><code>hreflang</code>: Specifies the language of the text in the linked document</li>
+            </ul>
+            
+            <h4>Common Uses:</h4>
+            
+            <h5>1. Stylesheets</h5>
+            <pre>
+&lt;!-- Main stylesheet --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+
+&lt;!-- Media-specific stylesheet --&gt;
+&lt;link rel="stylesheet" href="print.css" media="print"&gt;
+
+&lt;!-- Preload critical CSS --&gt;
+&lt;link rel="preload" href="critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'"&gt;
+            </pre>
+            
+            <h5>2. Favicons and App Icons</h5>
+            <pre>
+&lt;!-- Basic favicon --&gt;
+&lt;link rel="icon" href="favicon.ico"&gt;
+
+&lt;!-- Modern favicon with size specification --&gt;
+&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"&gt;
+
+&lt;!-- Apple Touch Icon --&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;
+
+&lt;!-- Android Chrome icons --&gt;
+&lt;link rel="manifest" href="site.webmanifest"&gt;
+            </pre>
+            
+            <h5>3. Alternative Page Versions</h5>
+            <pre>
+&lt;!-- Canonical URL --&gt;
+&lt;link rel="canonical" href="https://example.com/canonical-page"&gt;
+
+&lt;!-- Alternate language versions --&gt;
+&lt;link rel="alternate" hreflang="es" href="https://example.com/es/page"&gt;
+&lt;link rel="alternate" hreflang="fr" href="https://example.com/fr/page"&gt;
+
+&lt;!-- RSS/Atom feeds --&gt;
+&lt;link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml"&gt;
+            </pre>
+            
+            <h5>4. Preconnect, Prefetch, and Preload</h5>
+            <pre>
+&lt;!-- Preconnect to important third-party origins --&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+
+&lt;!-- Prefetch likely next page --&gt;
+&lt;link rel="prefetch" href="next-page.html"&gt;
+
+&lt;!-- Preload critical resources --&gt;
+&lt;link rel="preload" href="critical-font.woff2" as="font" type="font/woff2" crossorigin&gt;
+&lt;link rel="preload" href="hero-image.jpg" as="image"&gt;
+            </pre>
+        </article>
+    </section>
+
+    <section>
+        <h2>Mobile and App Meta Tags</h2>
+        
+        <article>
+            <h3>Mobile Theme Color</h3>
+            <p>Specifies the color of the browser UI elements, like the address bar in mobile browsers.</p>
+            <pre>
+&lt;meta name="theme-color" content="#4285f4"&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>Apple Specific Meta Tags</h3>
+            <pre>
+&lt;!-- Hide Safari UI components --&gt;
+&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
+
+&lt;!-- Status bar appearance --&gt;
+&lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt;
+
+&lt;!-- App title --&gt;
+&lt;meta name="apple-mobile-web-app-title" content="My App"&gt;
+
+&lt;!-- Prevent automatic detection of phone numbers --&gt;
+&lt;meta name="format-detection" content="telephone=no"&gt;
+            </pre>
+        </article>
+        
+        <article>
+            <h3>Microsoft Tile Tags</h3>
+            <pre>
+&lt;meta name="msapplication-TileColor" content="#2b5797"&gt;
+&lt;meta name="msapplication-TileImage" content="/mstile-144x144.png"&gt;
+&lt;meta name="msapplication-config" content="/browserconfig.xml"&gt;
+            </pre>
+        </article>
+    </section>
+
+    <section>
+        <h2>Complete Meta Tags Example</h2>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;!-- Character encoding --&gt;
+    &lt;meta charset="UTF-8"&gt;
+    
+    &lt;!-- Viewport settings for responsive design --&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- IE compatibility mode --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    
+    &lt;!-- Page title (displayed in browser tabs and bookmarks) --&gt;
+    &lt;title&gt;Comprehensive Meta Tags Example&lt;/title&gt;
+    
+    &lt;!-- SEO meta tags --&gt;
+    &lt;meta name="description" content="A comprehensive example of HTML meta tags and their usage for SEO, social media, and more."&gt;
+    &lt;meta name="keywords" content="HTML, meta tags, SEO, web development"&gt;
+    &lt;meta name="author" content="John Doe"&gt;
+    &lt;meta name="robots" content="index, follow"&gt;
+    
+    &lt;!-- Canonical URL --&gt;
+    &lt;link rel="canonical" href="https://example.com/meta-tags"&gt;
+    
+    &lt;!-- Open Graph meta tags for social media --&gt;
+    &lt;meta property="og:title" content="Comprehensive Meta Tags Example"&gt;
+    &lt;meta property="og:description" content="A comprehensive example of HTML meta tags and their usage for SEO, social media, and more."&gt;
+    &lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+    &lt;meta property="og:url" content="https://example.com/meta-tags"&gt;
+    &lt;meta property="og:type" content="website"&gt;
+    &lt;meta property="og:site_name" content="HTML Reference"&gt;
+    
+    &lt;!-- Twitter Card meta tags --&gt;
+    &lt;meta name="twitter:card" content="summary_large_image"&gt;
+    &lt;meta name="twitter:site" content="@yourusername"&gt;
+    &lt;meta name="twitter:title" content="Comprehensive Meta Tags Example"&gt;
+    &lt;meta name="twitter:description" content="A comprehensive example of HTML meta tags and their usage for SEO, social media, and more."&gt;
+    &lt;meta name="twitter:image" content="https://example.com/image.jpg"&gt;
+    
+    &lt;!-- Favicon and app icons --&gt;
+    &lt;link rel="icon" href="favicon.ico"&gt;
+    &lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;
+    &lt;link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;
+    &lt;link rel="manifest" href="site.webmanifest"&gt;
+    
+    &lt;!-- Mobile theme color --&gt;
+    &lt;meta name="theme-color" content="#4285f4"&gt;
+    
+    &lt;!-- Stylesheets --&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    
+    &lt;!-- Preload critical resources --&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link rel="preload" href="critical.css" as="style"&gt;
+    
+    &lt;!-- Alternate versions --&gt;
+    &lt;link rel="alternate" hreflang="es" href="https://example.com/es/meta-tags"&gt;
+    &lt;link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Page content... --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </section>
+
+    <section>
+        <h2>Best Practices for Meta Tags</h2>
+        <ul>
+            <li><strong>Prioritize important meta tags</strong>: Focus on charset, viewport, title, description, canonical URL, and social media tags</li>
+            <li><strong>Use UTF-8 encoding</strong>: Always include <code>&lt;meta charset="UTF-8"&gt;</code> as the first meta tag in the head</li>
+            <li><strong>Set a proper viewport</strong>: Include the viewport meta tag for responsive design</li>
+            <li><strong>Write compelling descriptions</strong>: Create unique, accurate, and engaging meta descriptions (150-160 characters)</li>
+            <li><strong>Be mindful of social sharing</strong>: Include Open Graph and Twitter Card meta tags</li>
+            <li><strong>Use canonical URLs</strong>: Always specify the canonical URL to prevent duplicate content issues</li>
+            <li><strong>Keep titles under 60 characters</strong>: Ensure your title tags are concise but descriptive</li>
+            <li><strong>Optimize images for social sharing</strong>: Use appropriately sized images for social media (typically 1200x630 pixels)</li>
+            <li><strong>Specify language and direction</strong>: Use the <code>lang</code> attribute on the <code>&lt;html&gt;</code> element</li>
+            <li><strong>Include favicons and app icons</strong>: Provide appropriate icons for different platforms and devices</li>
+            <li><strong>Test your meta tags</strong>: Use validation tools to ensure your tags are working correctly</li>
+            <li><strong>Avoid meta keyword stuffing</strong>: If you use the keywords meta tag, keep it focused and relevant</li>
+            <li><strong>Implement resource hints</strong>: Use preconnect, prefetch, and preload where appropriate to improve performance</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Testing and Validation Tools</h2>
+        <ul>
+            <li><strong>Open Graph Debugger</strong>: <a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Sharing Debugger</a></li>
+            <li><strong>Twitter Card Validator</strong>: <a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a></li>
+            <li><strong>LinkedIn Post Inspector</strong>: <a href="https://www.linkedin.com/post-inspector/" target="_blank">LinkedIn Post Inspector</a></li>
+            <li><strong>Pinterest Rich Pins Validator</strong>: <a href="https://developers.pinterest.com/tools/url-debugger/" target="_blank">Pinterest Rich Pins Validator</a></li>
+            <li><strong>Google Rich Results Test</strong>: <a href="https://search.google.com/test/rich-results" target="_blank">Google Rich Results Test</a></li>
+            <li><strong>Meta Tags Analyzer</strong>: <a href="https://metatags.io/" target="_blank">metatags.io</a></li>
+        </ul>
+        <p>Using these tools can help you identify issues with your meta tags and ensure they're being interpreted correctly by different platforms.</p>
+    </section>
+
+    <footer>
+<p><a href="../index.html" class="back-button">Back to Main Reference</a></p>
+        <p>&copy; Created Jinesh for My Most Intelligent Friend By ❤️ </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+

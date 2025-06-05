@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Reference</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>HTML Tags Reference</h1>
+        <p>A comprehensive guide to HTML tags and their usage</p>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#document-structure">Document Structure</a></li>
+            <li><a href="#text-content">Text Content</a></li>
+            <li><a href="#semantic-elements">Semantic Elements</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#links-and-navigation">Links & Navigation</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#other-elements">Other Elements</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="document-structure">
+            <h2>Document Structure</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/html.html')">
+                    <h3>&lt;html&gt;</h3>
+                    <p>Root element of an HTML document</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/head.html')">
+                    <h3>&lt;head&gt;</h3>
+                    <p>Container for metadata</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/body.html')">
+                    <h3>&lt;body&gt;</h3>
+                    <p>Document's body content</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/meta.html')">
+                    <h3>&lt;meta&gt;</h3>
+                    <p>Metadata about the document</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/title.html')">
+                    <h3>&lt;title&gt;</h3>
+                    <p>Document title</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/link.html')">
+                    <h3>&lt;link&gt;</h3>
+                    <p>Links to external resources</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/style.html')">
+                    <h3>&lt;style&gt;</h3>
+                    <p>Embedded CSS styles</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/script.html')">
+                    <h3>&lt;script&gt;</h3>
+                    <p>Embedded or external JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="text-content">
+            <h2>Text Content</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/h1-h6.html')">
+                    <h3>&lt;h1&gt; to &lt;h6&gt;</h3>
+                    <p>Heading elements</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/p.html')">
+                    <h3>&lt;p&gt;</h3>
+                    <p>Paragraph</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/span.html')">
+                    <h3>&lt;span&gt;</h3>
+                    <p>Inline container</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/div.html')">
+                    <h3>&lt;div&gt;</h3>
+                    <p>Block-level container</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/br.html')">
+                    <h3>&lt;br&gt;</h3>
+                    <p>Line break</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/hr.html')">
+                    <h3>&lt;hr&gt;</h3>
+                    <p>Horizontal rule</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/pre.html')">
+                    <h3>&lt;pre&gt;</h3>
+                    <p>Preformatted text</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/code.html')">
+                    <h3>&lt;code&gt;</h3>
+                    <p>Code fragment</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="semantic-elements">
+            <h2>Semantic Elements</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/header.html')">
+                    <h3>&lt;header&gt;</h3>
+                    <p>Introductory content</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/footer.html')">
+                    <h3>&lt;footer&gt;</h3>
+                    <p>Footer for document or section</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/main.html')">
+                    <h3>&lt;main&gt;</h3>
+                    <p>Main content of document</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/article.html')">
+                    <h3>&lt;article&gt;</h3>
+                    <p>Independent, self-contained content</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/section.html')">
+                    <h3>&lt;section&gt;</h3>
+                    <p>Standalone section</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/aside.html')">
+                    <h3>&lt;aside&gt;</h3>
+                    <p>Content indirectly related to the main content</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/nav.html')">
+                    <h3>&lt;nav&gt;</h3>
+                    <p>Navigation links</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/figure.html')">
+                    <h3>&lt;figure&gt;</h3>
+                    <p>Self-contained content with optional caption</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="forms">
+            <h2>Forms</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/form.html')">
+                    <h3>&lt;form&gt;</h3>
+                    <p>HTML form element</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/input.html')">
+                    <h3>&lt;input&gt;</h3>
+                    <p>Input control</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/button.html')">
+                    <h3>&lt;button&gt;</h3>
+                    <p>Clickable button</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/select.html')">
+                    <h3>&lt;select&gt;</h3>
+                    <p>Drop-down list</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/textarea.html')">
+                    <h3>&lt;textarea&gt;</h3>
+                    <p>Multi-line text input</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/label.html')">
+                    <h3>&lt;label&gt;</h3>
+                    <p>Label for a form element</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/fieldset.html')">
+                    <h3>&lt;fieldset&gt;</h3>
+                    <p>Group of related form elements</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/legend.html')">
+                    <h3>&lt;legend&gt;</h3>
+                    <p>Caption for a fieldset</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tables">
+            <h2>Tables</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/table.html')">
+                    <h3>&lt;table&gt;</h3>
+                    <p>Table element</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/tr.html')">
+                    <h3>&lt;tr&gt;</h3>
+                    <p>Table row</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/th.html')">
+                    <h3>&lt;th&gt;</h3>
+                    <p>Table header cell</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/td.html')">
+                    <h3>&lt;td&gt;</h3>
+                    <p>Table data cell</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/thead.html')">
+                    <h3>&lt;thead&gt;</h3>
+                    <p>Group of header rows</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/tbody.html')">
+                    <h3>&lt;tbody&gt;</h3>
+                    <p>Group of body rows</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/tfoot.html')">
+                    <h3>&lt;tfoot&gt;</h3>
+                    <p>Group of footer rows</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/caption.html')">
+                    <h3>&lt;caption&gt;</h3>
+                    <p>Table caption</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/img.html')">
+                    <h3>&lt;img&gt;</h3>
+                    <p>Image element</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/audio.html')">
+                    <h3>&lt;audio&gt;</h3>
+                    <p>Sound content</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/video.html')">
+                    <h3>&lt;video&gt;</h3>
+                    <p>Video content</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/source.html')">
+                    <h3>&lt;source&gt;</h3>
+                    <p>Media resources for video/audio</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/track.html')">
+                    <h3>&lt;track&gt;</h3>
+                    <p>Text tracks for video/audio</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/canvas.html')">
+                    <h3>&lt;canvas&gt;</h3>
+                    <p>Drawing element</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/svg.html')">
+                    <h3>&lt;svg&gt;</h3>
+                    <p>Scalable vector graphics</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/picture.html')">
+                    <h3>&lt;picture&gt;</h3>
+                    <p>Container for multiple image sources</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="links-and-navigation">
+            <h2>Links & Navigation</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/a.html')">
+                    <h3>&lt;a&gt;</h3>
+                    <p>Hyperlink</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/map.html')">
+                    <h3>&lt;map&gt;</h3>
+                    <p>Image map</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/area.html')">
+                    <h3>&lt;area&gt;</h3>
+                    <p>Area inside an image map</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/iframe.html')">
+                    <h3>&lt;iframe&gt;</h3>
+                    <p>Inline frame</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lists">
+            <h2>Lists</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/ul.html')">
+                    <h3>&lt;ul&gt;</h3>
+                    <p>Unordered list</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/ol.html')">
+                    <h3>&lt;ol&gt;</h3>
+                    <p>Ordered list</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/li.html')">
+                    <h3>&lt;li&gt;</h3>
+                    <p>List item</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/dl.html')">
+                    <h3>&lt;dl&gt;</h3>
+                    <p>Description list</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/dt.html')">
+                    <h3>&lt;dt&gt;</h3>
+                    <p>Description term</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/dd.html')">
+                    <h3>&lt;dd&gt;</h3>
+                    <p>Description details</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="other-elements">
+            <h2>Other Elements</h2>
+            <div class="tag-grid">
+                <div class="tag-card" onclick="openDetailPage('pages/abbr.html')">
+                    <h3>&lt;abbr&gt;</h3>
+                    <p>Abbreviation</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/blockquote.html')">
+                    <h3>&lt;blockquote&gt;</h3>
+                    <p>Block quotation</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/cite.html')">
+                    <h3>&lt;cite&gt;</h3>
+                    <p>Citation</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/q.html')">
+                    <h3>&lt;q&gt;</h3>
+                    <p>Inline quotation</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/time.html')">
+                    <h3>&lt;time&gt;</h3>
+                    <p>Time</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/mark.html')">
+                    <h3>&lt;mark&gt;</h3>
+                    <p>Marked/highlighted text</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/progress.html')">
+                    <h3>&lt;progress&gt;</h3>
+                    <p>Progress indicator</p>
+                </div>
+                <div class="tag-card" onclick="openDetailPage('pages/details.html')">
+                    <h3>&lt;details&gt;</h3>
+                    <p>Disclosure widget</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Created Jinesh for My Most Intelligent Friend By ❤️ </p>
+        <nav>
+            <ul>
+                <li><a href="#top">Back to Top</a></li>
+                <li><a href="https://www.instagram.com/jinesh_bora/">About</a></li>
+                <li><a href="https://github.com/jinesh-bora">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        function openDetailPage(page) {
+            window.open(page, '_blank');
+        }
+    </script>
+</body>
+</html>

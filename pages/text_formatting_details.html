@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting Tags - HTML Reference</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Text Formatting Tags</h1>
+        <p>HTML elements used to format and structure text content</p>
+    </header>
+
+    <nav>
+        <ul>
+<li><a href="../index.html">Back to Main Reference</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>About Text Formatting Tags</h2>
+        <p>Text formatting tags allow you to control the appearance, structure, and semantic meaning of text on your webpages. These elements are essential for creating readable content, establishing visual hierarchy, and improving accessibility.</p>
+        <p>Using the right text formatting elements not only enhances the visual presentation of your content but also improves search engine optimization (SEO) and accessibility for screen readers and other assistive technologies.</p>
+    </section>
+
+    <section>
+        <h2>Heading Tags</h2>
+        
+        <article>
+            <h3>&lt;h1&gt; to &lt;h6&gt;</h3>
+            <p>Heading tags define HTML headings, with &lt;h1&gt; being the highest level (most important) and &lt;h6&gt; the lowest level (least important).</p>
+            <p>Example:</p>
+            <pre>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Section Heading&lt;/h3&gt;
+&lt;h4&gt;Sub-section Heading&lt;/h4&gt;
+&lt;h5&gt;Minor Heading&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;
+            </pre>
+            <p>Best practices for headings:</p>
+            <ul>
+                <li>Use only one &lt;h1&gt; element per page, typically for the main title</li>
+                <li>Follow a hierarchical structure (don't skip levels like going from h2 directly to h4)</li>
+                <li>Keep headings concise and descriptive</li>
+                <li>Use headings to create a logical document outline</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Paragraph and Line Break Tags</h2>
+        
+        <article>
+            <h3>&lt;p&gt;</h3>
+            <p>Defines a paragraph of text. Browsers automatically add margin space before and after paragraphs.</p>
+            <p>Example: <code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></p>
+            <p>The paragraph element is one of the most commonly used text containers in HTML. It represents a logical paragraph of text.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;br&gt;</h3>
+            <p>Inserts a single line break. It's an empty element (has no closing tag).</p>
+            <p>Example: <code>This text contains&lt;br&gt;a line break.</code></p>
+            <p>Use the &lt;br&gt; element sparingly. It's appropriate for addresses, poetry, or other content where line breaks are meaningful. Don't use it just to create visual spacing (use CSS margins/padding instead).</p>
+        </article>
+        
+        <article>
+            <h3>&lt;hr&gt;</h3>
+            <p>Creates a horizontal rule (line) that acts as a divider between sections. It's an empty element.</p>
+            <p>Example:</p>
+            <pre>
+&lt;p&gt;This is the first section.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is the second section.&lt;/p&gt;
+            </pre>
+            <p>The &lt;hr&gt; element represents a thematic break between content. In HTML5, it has semantic meaning rather than just being a visual divider.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Text Emphasis and Highlighting</h2>
+        
+        <article>
+            <h3>&lt;strong&gt;</h3>
+            <p>Defines important text that is typically displayed in bold. It has semantic meaning indicating strong importance.</p>
+            <p>Example: <code>This is &lt;strong&gt;very important&lt;/strong&gt; text.</code></p>
+            <p>The &lt;strong&gt; element is preferred over the &lt;b&gt; element when the text has semantic importance, not just visual emphasis.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;em&gt;</h3>
+            <p>Defines emphasized text that is typically displayed in italic. It has semantic meaning indicating emphasis.</p>
+            <p>Example: <code>This is &lt;em&gt;emphasized&lt;/em&gt; text.</code></p>
+            <p>The &lt;em&gt; element is preferred over the &lt;i&gt; element when the text has semantic emphasis, not just visual styling.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;mark&gt;</h3>
+            <p>Defines text that should be highlighted or marked for reference. Typically displayed with a yellow background.</p>
+            <p>Example: <code>Search results containing &lt;mark&gt;highlighted terms&lt;/mark&gt;</code></p>
+            <p>The &lt;mark&gt; element is particularly useful for highlighting search terms, or marking important parts of text for reference.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;b&gt;</h3>
+            <p>Represents text that should be stylistically bold but doesn't have extra importance.</p>
+            <p>Example: <code>The concert will be held on &lt;b&gt;July 15th&lt;/b&gt; at 8 PM.</code></p>
+            <p>Use &lt;b&gt; when there is no added importance to the text but you want to stylistically bold it. Otherwise, prefer &lt;strong&gt;.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;i&gt;</h3>
+            <p>Represents text that is set off from the normal prose, such as foreign words, technical terms, or thoughts.</p>
+            <p>Example: <code>The Latin phrase &lt;i&gt;carpe diem&lt;/i&gt; means "seize the day".</code></p>
+            <p>Use &lt;i&gt; for text that would traditionally be italicized: foreign words, technical terms, thoughts, etc. For emphasis, use &lt;em&gt; instead.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Subscript, Superscript, and Other Text Formatting</h2>
+        
+        <article>
+            <h3>&lt;sub&gt; and &lt;sup&gt;</h3>
+            <p>&lt;sub&gt; defines subscript text and &lt;sup&gt; defines superscript text.</p>
+            <p>Example: <code>H&lt;sub&gt;2&lt;/sub&gt;O is water and 2&lt;sup&gt;3&lt;/sup&gt; equals 8</code></p>
+            <p>Subscript and superscript are commonly used in mathematical formulas, chemical formulas, and footnotes.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;small&gt;</h3>
+            <p>Represents side-comments and small print, like copyright and legal text.</p>
+            <p>Example: <code>&lt;small&gt;Copyright 2025. All rights reserved.&lt;/small&gt;</code></p>
+            <p>The &lt;small&gt; element doesn't just make text smaller; it has semantic meaning for less important text.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;del&gt; and &lt;ins&gt;</h3>
+            <p>&lt;del&gt; represents deleted text and &lt;ins&gt; represents inserted text, often used to show document changes.</p>
+            <p>Example: <code>This is &lt;del&gt;deleted&lt;/del&gt; &lt;ins&gt;inserted&lt;/ins&gt; text.</code></p>
+            <p>These elements are useful for showing edits or changes to documents and content.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Block Quotations and Citations</h2>
+        
+        <article>
+            <h3>&lt;blockquote&gt;</h3>
+            <p>Defines a section that is quoted from another source.</p>
+            <p>Example:</p>
+            <pre>
+&lt;blockquote&gt;
+  &lt;p&gt;The only thing we have to fear is fear itself.&lt;/p&gt;
+  &lt;footer&gt;—Franklin D. Roosevelt&lt;/footer&gt;
+&lt;/blockquote&gt;
+            </pre>
+            <p>The &lt;blockquote&gt; element can include the <code>cite</code> attribute to specify the source URL of the quote.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;q&gt;</h3>
+            <p>Defines a short inline quotation. Browsers typically add quotation marks around the content.</p>
+            <p>Example: <code>As Shakespeare wrote, &lt;q&gt;All the world's a stage&lt;/q&gt;.</code></p>
+            <p>Use &lt;q&gt; for short inline quotes and &lt;blockquote&gt; for longer, block-level quotations.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;cite&gt;</h3>
+            <p>Defines the title of a creative work (e.g., a book, a poem, a song, a movie).</p>
+            <p>Example: <code>My favorite book is &lt;cite&gt;The Great Gatsby&lt;/cite&gt; by F. Scott Fitzgerald.</code></p>
+            <p>The &lt;cite&gt; element is typically rendered in italic text by browsers.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Preformatted Text</h2>
+        
+        <article>
+            <h3>&lt;pre&gt;</h3>
+            <p>Defines preformatted text that preserves both spaces and line breaks. Typically displayed in a monospaced font.</p>
+            <p>Example:</p>
+            <pre>
+&lt;pre&gt;
+function greet() {
+  console.log("Hello, world!");
+}
+&lt;/pre&gt;
+            </pre>
+            <p>The &lt;pre&gt; element is useful for displaying code, ASCII art, or any text where whitespace formatting is important.</p>
+        </article>
+        
+        <article>
+            <h3>&lt;code&gt;</h3>
+            <p>Represents a fragment of computer code. Often used within a &lt;pre&gt; element for code blocks.</p>
+            <p>Example: <code>The HTML &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element is a container.</code></p>
+            <p>When showing HTML code examples, remember to escape the angle brackets (&lt; becomes &amp;lt; and &gt; becomes &amp;gt;).</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Text Formatting Best Practices</h2>
+        <ul>
+            <li>Use semantic elements that describe the meaning of content, not just its appearance</li>
+            <li>Follow proper document structure with headings in hierarchical order</li>
+            <li>Use &lt;strong&gt; and &lt;em&gt; for semantic emphasis rather than &lt;b&gt; and &lt;i&gt; when appropriate</li>
+            <li>Avoid using &lt;br&gt; tags just for spacing (use CSS instead)</li>
+            <li>Use the appropriate quotation elements (&lt;blockquote&gt; and &lt;q&gt;) for quoted content</li>
+            <li>Keep paragraphs concise and focused on a single idea</li>
+            <li>Use preformatted text (&lt;pre&gt;) when whitespace and formatting matter</li>
+            <li>Consider accessibility implications when formatting text</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Common Use Cases</h2>
+        <h3>Article or Blog Post</h3>
+        <pre>
+&lt;article&gt;
+  &lt;h1&gt;Main Article Title&lt;/h1&gt;
+  &lt;p&gt;Introductory paragraph with &lt;strong&gt;important points&lt;/strong&gt; and &lt;em&gt;emphasized content&lt;/em&gt;.&lt;/p&gt;
+  
+  &lt;h2&gt;First Section&lt;/h2&gt;
+  &lt;p&gt;Section content with a &lt;q&gt;brief quote&lt;/q&gt; included inline.&lt;/p&gt;
+  
+  &lt;blockquote&gt;
+    &lt;p&gt;This is an extended quotation from another source that's displayed as a block.&lt;/p&gt;
+    &lt;footer&gt;—Author Name, &lt;cite&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+  &lt;/blockquote&gt;
+  
+  &lt;h2&gt;Technical Section&lt;/h2&gt;
+  &lt;p&gt;Some technical content with code example:&lt;/p&gt;
+  &lt;pre&gt;&lt;code&gt;
+function exampleCode() {
+  return "Hello World";
+}
+  &lt;/code&gt;&lt;/pre&gt;
+  
+  &lt;p&gt;Final thoughts and conclusion.&lt;/p&gt;
+&lt;/article&gt;
+        </pre>
+    </section>
+
+    <footer>
+<p><a href="../index.html" class="back-button">Back to Main Reference</a></p>
+        <p>&copy; Created Jinesh for My Most Intelligent Friend By ❤️ </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+

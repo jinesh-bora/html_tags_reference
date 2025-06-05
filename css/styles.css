@@ -1,0 +1,869 @@
+/* 
+   HTML Tags Reference - Main Stylesheet
+   A comprehensive stylesheet for the HTML Tags Reference project
+*/
+
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Scheme */
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --medium-gray: #95a5a6;
+    --link-color: #2980b9;
+    --code-bg: #f8f9fa;
+    --warning-color: #f39c12;
+    --success-color: #27ae60;
+    
+    /* Typography */
+    --base-font-size: 16px;
+    --heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --code-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Borders */
+    --border-radius: 5px;
+    --border-color: #ddd;
+    
+    /* Shadows */
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --hover-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+html {
+    font-size: var(--base-font-size);
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* For fixed headers when scrolling to anchor */
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    background-color: var(--light-gray);
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--dark-color);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: var(--spacing-md);
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--link-color);
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* ===== LAYOUT COMPONENTS ===== */
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+header p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background-color: #34495e;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    margin: 5px 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+    display: block;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Active navigation state */
+nav a.active {
+    background-color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Sections and Content Containers */
+section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--box-shadow);
+}
+
+article {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+footer nav {
+    background-color: transparent;
+    margin-top: var(--spacing-md);
+}
+
+footer nav ul {
+    justify-content: center;
+}
+
+footer nav a {
+    color: var(--medium-gray);
+}
+
+footer nav a:hover {
+    background-color: transparent;
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+/* ===== TAG GRID LAYOUT ===== */
+.tag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.tag-card {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.tag-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--secondary-color);
+}
+
+.tag-card h3 {
+    margin-top: 0;
+    color: var(--link-color);
+    font-size: 1.3rem;
+}
+
+.tag-card p {
+    margin-bottom: 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* ===== CODE STYLING ===== */
+code {
+    font-family: var(--code-font);
+    background-color: var(--code-bg);
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: var(--accent-color);
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: var(--code-bg);
+    border-left: 4px solid var(--medium-gray);
+    padding: var(--spacing-md);
+    border-radius: 3px;
+    overflow-x: auto;
+    font-family: var(--code-font);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-md);
+}
+
+/* ===== LIST STYLING ===== */
+ul, ol {
+    padding-left: 25px;
+    margin-bottom: var(--spacing-md);
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Definition lists */
+dl {
+    margin-bottom: var(--spacing-md);
+}
+
+dt {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+dd {
+    margin-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ===== TABLE STYLING ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-md) 0;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: var(--spacing-sm);
+    text-align: left;
+}
+
+th {
+    background-color: var(--light-gray);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+caption {
+    font-style: italic;
+    padding: var(--spacing-sm);
+    caption-side: bottom;
+}
+
+/* ===== DETAIL PAGE SPECIFIC STYLES ===== */
+.detail-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tag-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.tag-syntax {
+    font-family: var(--code-font);
+    font-size: 1.2rem;
+    background-color: var(--code-bg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    color: var(--accent-color);
+    margin-right: var(--spacing-md);
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: var(--link-color);
+}
+
+.tag-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.attribute {
+    background-color: #f0f7fb;
+    border-left: 5px solid var(--secondary-color);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.attribute-name {
+    font-weight: bold;
+    color: var(--link-color);
+}
+
+.example-section {
+    background-color: #fdf9f2;
+    border: 1px solid #f5e0c1;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.compatibility {
+    margin-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-md);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ===== BUTTONS AND INTERACTIVE ELEMENTS ===== */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--link-color);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    section, article {
+        padding: var(--spacing-md);
+    }
+    
+    .tag-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .tag-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    pre {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    body {
+        background: white;
+        font-size: 12pt;
+        color: black;
+        max-width: 100%;
+    }
+    
+    header, nav, footer, .back-button {
+        display: none;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    p, li {
+        page-break-inside: avoid;
+    }
+    
+    table, figure {
+        page-break-inside: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+    }
+    
+    pre, code {
+        background-color: white !important;
+        border: 1px solid #ddd;
+        font-size: 10pt;
+    }
+    
+    section {
+        border: none;
+        box-shadow: none;
+        margin-bottom: 20pt;
+    }
+    
+    .tag-grid {
+        display: block;
+    }
+    
+    .tag-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 10pt;
+        border: 1px solid #ddd;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Skip to content link for keyboard navigation */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    :root {
+        --primary-color: #000;
+        --secondary-color: #00539F;
+        --accent-color: #CC0000;
+        --text-color: #000;
+        --light-gray: #fff;
+        --border-color: #000;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    .tag-card {
+        border: 2px solid black;
+    }
+}
+
+/* Base styles and typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #2980b9;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Color scheme and visual hierarchy */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+section {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Navigation styling */
+nav {
+    background-color: #34495e;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    margin: 5px 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3498db;
+}
+
+/* Section and article formatting */
+article {
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+/* Code block styling */
+code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #e74c3c;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: #f8f9fa;
+    border-left: 4px solid #95a5a6;
+    padding: 15px;
+    border-radius: 3px;
+    overflow-x: auto;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    line-height: 1.4;
+}
+
+/* Lists styling */
+ul, ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    section, article {
+        padding: 10px;
+    }
+}
+
+/* Additional styles for tag detail pages */
+.tag-detail-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.attribute-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.attribute-table, .attribute-table th, .attribute-table td {
+    border: 1px solid #ddd;
+}
+
+.attribute-table th, .attribute-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.attribute-table th {
+    background-color: #f2f2f2;
+}
+
+.attribute-name {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.example-section {
+    background-color: #fdf9f2;
+    border: 1px solid #f5e0c1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+/* Make tag headings clickable */
+article h3 {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+article h3:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
