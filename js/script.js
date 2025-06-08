@@ -68,6 +68,15 @@ const pageFileMap = {
     'area.html': 'links_details.html',
     'iframe.html': 'links_details.html',
 
+    'abbr.html': 'other_details.html',
+    'blockquote': 'other_details.html',
+    'cite.html': 'other_details.html',
+    'q.html': 'other_details.html',
+    'time.html': 'other_details.html',
+    'mark.html': 'other_details.html',
+    'progress.html': 'other_details.html',
+    'details.html': 'other_details.html'
+
 };
 
 // Function to open the mapped detail file

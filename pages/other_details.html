@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other HTML Tags - HTML Reference</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Other HTML Tags</h1>
+        <p>Comprehensive reference for miscellaneous HTML elements including abbreviations, quotations, time, progress indicators, and more</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Back to Main Reference</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>About Other HTML Elements</h2>
+        <p>This section covers various HTML elements that don't fit into the main categories but are essential for creating rich, semantic web content. These elements help with citations, abbreviations, time representation, progress indicators, and interactive disclosure widgets.</p>
+    </section>
+
+    <!-- ABBREVIATION TAG -->
+    <section id="abbr-tag">
+        <h2>&lt;abbr&gt; - Abbreviation</h2>
+        <p>The <code>&lt;abbr&gt;</code> element represents an abbreviation or acronym. The optional <code>title</code> attribute provides the full expansion.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;abbr title="expansion"&gt;abbreviation&lt;/abbr&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>Basic Abbreviation</h4>
+            <pre><code>&lt;p&gt;I work for &lt;abbr title="World Wide Web Consortium"&gt;W3C&lt;/abbr&gt;.&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>I work for <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Technical Abbreviations</h4>
+            <pre><code>&lt;p&gt;This website uses &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; and &lt;abbr title="JavaScript"&gt;JS&lt;/abbr&gt;.&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>This website uses <abbr title="Cascading Style Sheets">CSS</abbr> and <abbr title="JavaScript">JS</abbr>.</p>
+            </div>
+        </div>
+        
+        <h3>Key Points</h3>
+        <ul>
+            <li>Always include the <code>title</code> attribute with full expansion</li>
+            <li>Screen readers announce the title when focused</li>
+            <li>Useful for accessibility and clarity</li>
+        </ul>
+    </section>
+
+    <!-- BLOCKQUOTE TAG -->
+    <section id="blockquote-tag">
+        <h2>&lt;blockquote&gt; - Block Quotation</h2>
+        <p>The <code>&lt;blockquote&gt;</code> element indicates that the enclosed text is an extended quotation from another source.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;blockquote cite="source-url"&gt;
+    &lt;p&gt;Quoted text here&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>Simple Block Quote</h4>
+            <pre><code>&lt;blockquote&gt;
+    &lt;p&gt;The best way to predict the future is to create it.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+            <div class="result">
+                <blockquote>
+                    <p>The best way to predict the future is to create it.</p>
+                </blockquote>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Block Quote with Citation</h4>
+            <pre><code>&lt;blockquote cite="https://example.com"&gt;
+    &lt;p&gt;Innovation distinguishes between a leader and a follower.&lt;/p&gt;
+    &lt;footer&gt;— &lt;cite&gt;Steve Jobs&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+            <div class="result">
+                <blockquote cite="https://example.com">
+                    <p>Innovation distinguishes between a leader and a follower.</p>
+                    <footer>— <cite>Steve Jobs</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+        
+        <h3>Attributes</h3>
+        <ul>
+            <li><code>cite</code> - URL of the source document or message</li>
+        </ul>
+    </section>
+
+    <!-- CITE TAG -->
+    <section id="cite-tag">
+        <h2>&lt;cite&gt; - Citation</h2>
+        <p>The <code>&lt;cite&gt;</code> element represents the title of a work (book, article, song, movie, etc.) or the name of the author.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;cite&gt;Title or Author Name&lt;/cite&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>Book Citation</h4>
+            <pre><code>&lt;p&gt;As mentioned in &lt;cite&gt;The Art of Computer Programming&lt;/cite&gt; by Donald Knuth...&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>As mentioned in <cite>The Art of Computer Programming</cite> by Donald Knuth...</p>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Article Citation</h4>
+            <pre><code>&lt;p&gt;According to the article &lt;cite&gt;Web Standards and Best Practices&lt;/cite&gt;...&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>According to the article <cite>Web Standards and Best Practices</cite>...</p>
+            </div>
+        </div>
+        
+        <h3>Usage Guidelines</h3>
+        <ul>
+            <li>Use for titles of creative works</li>
+            <li>Can include books, articles, songs, movies, paintings</li>
+            <li>Should not be used for author names alone</li>
+        </ul>
+    </section>
+
+    <!-- Q TAG -->
+    <section id="q-tag">
+        <h2>&lt;q&gt; - Inline Quotation</h2>
+        <p>The <code>&lt;q&gt;</code> element indicates that the enclosed text is a short inline quotation.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;q cite="source-url"&gt;Quoted text&lt;/q&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>Simple Inline Quote</h4>
+            <pre><code>&lt;p&gt;Einstein said, &lt;q&gt;Imagination is more important than knowledge.&lt;/q&gt;&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>Einstein said, <q>Imagination is more important than knowledge.</q></p>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Quote with Citation</h4>
+            <pre><code>&lt;p&gt;The motto &lt;q cite="https://example.com"&gt;Just Do It&lt;/q&gt; is well known.&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>The motto <q cite="https://example.com">Just Do It</q> is well known.</p>
+            </div>
+        </div>
+        
+        <h3>Key Features</h3>
+        <ul>
+            <li>Browsers automatically add quotation marks</li>
+            <li>Different languages use different quotation styles</li>
+            <li>Use for short inline quotes only</li>
+        </ul>
+    </section>
+
+    <!-- TIME TAG -->
+    <section id="time-tag">
+        <h2>&lt;time&gt; - Time Element</h2>
+        <p>The <code>&lt;time&gt;</code> element represents a specific period in time or a range of time.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;time datetime="YYYY-MM-DD"&gt;Human readable time&lt;/time&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>Date</h4>
+            <pre><code>&lt;p&gt;Published on &lt;time datetime="2024-06-08"&gt;June 8, 2024&lt;/time&gt;&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>Published on <time datetime="2024-06-08">June 8, 2024</time></p>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Date and Time</h4>
+            <pre><code>&lt;p&gt;Event starts at &lt;time datetime="2024-12-25T09:00"&gt;9:00 AM on Christmas Day&lt;/time&gt;&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>Event starts at <time datetime="2024-12-25T09:00">9:00 AM on Christmas Day</time></p>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Duration</h4>
+            <pre><code>&lt;p&gt;The meeting lasted &lt;time datetime="PT2H30M"&gt;2 hours and 30 minutes&lt;/time&gt;&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>The meeting lasted <time datetime="PT2H30M">2 hours and 30 minutes</time></p>
+            </div>
+        </div>
+        
+        <h3>Datetime Formats</h3>
+        <ul>
+            <li><code>YYYY-MM-DD</code> - Date</li>
+            <li><code>HH:MM</code> - Time</li>
+            <li><code>YYYY-MM-DDTHH:MM</code> - Date and time</li>
+            <li><code>PTHHMMSS</code> - Duration</li>
+        </ul>
+    </section>
+
+    <!-- MARK TAG -->
+    <section id="mark-tag">
+        <h2>&lt;mark&gt; - Marked Text</h2>
+        <p>The <code>&lt;mark&gt;</code> element represents text that is marked or highlighted for reference purposes.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;mark&gt;highlighted text&lt;/mark&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>Search Results</h4>
+            <pre><code>&lt;p&gt;Search results for &lt;mark&gt;HTML&lt;/mark&gt; returned 150 matches.&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>Search results for <mark>HTML</mark> returned 150 matches.</p>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Important Information</h4>
+            <pre><code>&lt;p&gt;Please note: &lt;mark&gt;Registration closes on Friday&lt;/mark&gt;.&lt;/p&gt;</code></pre>
+            <div class="result">
+                <p>Please note: <mark>Registration closes on Friday</mark>.</p>
+            </div>
+        </div>
+        
+        <h3>Use Cases</h3>
+        <ul>
+            <li>Highlighting search terms in results</li>
+            <li>Marking relevant text in quotes</li>
+            <li>Indicating important information</li>
+            <li>Drawing attention to specific content</li>
+        </ul>
+    </section>
+
+    <!-- PROGRESS TAG -->
+    <section id="progress-tag">
+        <h2>&lt;progress&gt; - Progress Indicator</h2>
+        <p>The <code>&lt;progress&gt;</code> element displays the completion progress of a task.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;progress value="current" max="maximum"&gt;fallback text&lt;/progress&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>File Upload Progress</h4>
+            <pre><code>&lt;label for="file-progress"&gt;File upload progress:&lt;/label&gt;
+&lt;progress id="file-progress" value="75" max="100"&gt;75%&lt;/progress&gt;</code></pre>
+            <div class="result">
+                <label for="file-progress">File upload progress:</label>
+                <progress id="file-progress" value="75" max="100">75%</progress>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Indeterminate Progress</h4>
+            <pre><code>&lt;p&gt;Loading...&lt;/p&gt;
+&lt;progress&gt;Loading...&lt;/progress&gt;</code></pre>
+            <div class="result">
+                <p>Loading...</p>
+                <progress>Loading...</progress>
+            </div>
+        </div>
+        
+        <h3>Attributes</h3>
+        <ul>
+            <li><code>value</code> - Current progress value</li>
+            <li><code>max</code> - Maximum value (default: 1)</li>
+            <li>Without <code>value</code> - Shows indeterminate progress</li>
+        </ul>
+    </section>
+
+    <!-- DETAILS TAG -->
+    <section id="details-tag">
+        <h2>&lt;details&gt; - Disclosure Widget</h2>
+        <p>The <code>&lt;details&gt;</code> element creates a disclosure widget where additional information can be shown or hidden.</p>
+        
+        <h3>Syntax</h3>
+        <pre><code>&lt;details&gt;
+    &lt;summary&gt;Summary text&lt;/summary&gt;
+    &lt;p&gt;Additional content here&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        
+        <h3>Examples</h3>
+        <div class="example">
+            <h4>Basic Details</h4>
+            <pre><code>&lt;details&gt;
+    &lt;summary&gt;Click to expand&lt;/summary&gt;
+    &lt;p&gt;This content is hidden by default but can be shown by clicking the summary.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            <div class="result">
+                <details>
+                    <summary>Click to expand</summary>
+                    <p>This content is hidden by default but can be shown by clicking the summary.</p>
+                </details>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>FAQ Section</h4>
+            <pre><code>&lt;details&gt;
+    &lt;summary&gt;What is HTML?&lt;/summary&gt;
+    &lt;p&gt;HTML (HyperText Markup Language) is the standard markup language for creating web pages.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            <div class="result">
+                <details>
+                    <summary>What is HTML?</summary>
+                    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
+                </details>
+            </div>
+        </div>
+        
+        <div class="example">
+            <h4>Open by Default</h4>
+            <pre><code>&lt;details open&gt;
+    &lt;summary&gt;This is open by default&lt;/summary&gt;
+    &lt;p&gt;This content is visible when the page loads because of the 'open' attribute.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            <div class="result">
+                <details open>
+                    <summary>This is open by default</summary>
+                    <p>This content is visible when the page loads because of the 'open' attribute.</p>
+                </details>
+            </div>
+        </div>
+        
+        <h3>Key Features</h3>
+        <ul>
+            <li>The <code>&lt;summary&gt;</code> element provides the clickable heading</li>
+            <li>Content inside is hidden/shown when clicked</li>
+            <li>The <code>open</code> attribute makes it expanded by default</li>
+            <li>Great for FAQs, collapsible content, and space-saving designs</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Browser Support</h2>
+        <p>All these elements are well-supported across modern browsers:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Chrome</th>
+                    <th>Firefox</th>
+                    <th>Safari</th>
+                    <th>Edge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;abbr&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>&lt;blockquote&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>&lt;cite&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>&lt;q&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>&lt;time&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>&lt;mark&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>&lt;progress&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>&lt;details&gt;</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Best Practices</h2>
+        <h3>General Guidelines</h3>
+        <ul>
+            <li><strong>Semantic Usage</strong>: Use these elements for their intended semantic meaning</li>
+            <li><strong>Accessibility</strong>: Always consider screen readers and assistive technologies</li>
+            <li><strong>Progressive Enhancement</strong>: Ensure content works even if styling fails</li>
+            <li><strong>Meaningful Content</strong>: Provide clear, descriptive text and attributes</li>
+        </ul>
+        
+        <h3>Specific Recommendations</h3>
+        <ul>
+            <li><strong>&lt;abbr&gt;</strong>: Always include the title attribute for clarity</li>
+            <li><strong>&lt;blockquote&gt;</strong>: Use the cite attribute to reference sources</li>
+            <li><strong>&lt;time&gt;</strong>: Include machine-readable datetime values</li>
+            <li><strong>&lt;progress&gt;</strong>: Provide fallback text for older browsers</li>
+            <li><strong>&lt;details&gt;</strong>: Write clear, descriptive summary text</li>
+        </ul>
+    </section>
+
+        <footer>
+<p><a href="../index.html" class="back-button">Back to Main Reference</a></p>
+        <p>&copy; Created Jinesh for My Most Intelligent Friend By ❤️ </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
